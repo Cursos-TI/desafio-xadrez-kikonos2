@@ -4,6 +4,13 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+
+int main() {
+    // Constantes para o número de movimentos de cada peça
+    const int BISPO_MOVIMENTOS = 5;
+    const int TORRE_MOVIMENTOS = 5;
+    const int RAINHA_MOVIMENTOS = 8;
+
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
@@ -21,9 +28,43 @@ int main() {
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
 
+    #include <stdio.h>
+
+    int main () {
+        int movimentoCompleto = 1; // Flag para controlar o movimento em 'L'
+
+        while (movimentoCompleto--)
+        {
+            for (int i = 0; i < 2; i++) {
+                printf("cima\n");   // Imprime "Cima" duas vezes
+            }
+            printf("Direita\n");    //imprime "direita" uma vez
+        }
+
+        return 0;
+
+    }
+
+
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+
+#include <stdio.h>
+
+void moverTorre(int casas) {
+    if (casas > 0) {
+        printf("Direita\n");
+        moverTorre(casas -1);
+        
+    }
+}
+
+int main () {
+    moverTorres(5);
+    return 0;
+
+}
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
